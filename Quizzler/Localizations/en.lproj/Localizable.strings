@@ -9,3 +9,5 @@
 "result_message" = "You got";
 "points" = "points";
 "start" = "Start new game";
+"correct" = "Correct";
+"wrong" = "Wrong";

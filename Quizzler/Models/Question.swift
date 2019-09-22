@@ -88,7 +88,10 @@ class Question {
             self.secondNumber = firstNum
         }
         
-        self.fakeAnswer = Int.random(in: (answer-2)...(answer+1                                                                                                                         ))
+        self.fakeAnswer = Int.random(in: (answer-2)...(answer+1))
+        if (self.fakeAnswer!<0){
+            self.fakeAnswer = Int.random(in: 0...(answer+2))
+        }
     }
     
     func toString() -> String {

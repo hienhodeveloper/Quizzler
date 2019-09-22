@@ -16,6 +16,8 @@
 		A6803487233527250020B71D /* ListQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6803486233527250020B71D /* ListQuestion.swift */; };
 		A680348C23354A480020B71D /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = A680348B23354A480020B71D /* correct.wav */; };
 		A680348F23354A7C0020B71D /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A680348E23354A7C0020B71D /* SoundManager.swift */; };
+		A6895C2F23375CE6006029BF /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A6895C2C23375CE6006029BF /* ProgressHUD.m */; };
+		A6895C3023375CE6006029BF /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A6895C2E23375CE6006029BF /* ProgressHUD.bundle */; };
 		A6AB68B923362F3600358E2E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6AB68BB23362F3600358E2E /* Localizable.strings */; };
 		A6AB68BF23362FC500358E2E /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AB68BE23362FC500358E2E /* String+Localizable.swift */; };
 		A6BE488C2336717E0016C6DD /* VibrateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BE488B2336717E0016C6DD /* VibrateManager.swift */; };
@@ -36,6 +38,10 @@
 		A6803486233527250020B71D /* ListQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListQuestion.swift; sourceTree = "<group>"; };
 		A680348B23354A480020B71D /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
 		A680348E23354A7C0020B71D /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		A6895C2B23375CE6006029BF /* Quizzler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Quizzler-Bridging-Header.h"; sourceTree = "<group>"; };
+		A6895C2C23375CE6006029BF /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressHUD.m; path = ProgressHUD/ProgressHUD.m; sourceTree = "<group>"; };
+		A6895C2D23375CE6006029BF /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgressHUD.h; path = ProgressHUD/ProgressHUD.h; sourceTree = "<group>"; };
+		A6895C2E23375CE6006029BF /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ProgressHUD.bundle; path = ProgressHUD/ProgressHUD.bundle; sourceTree = "<group>"; };
 		A6AB68AC233626D300358E2E /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A6AB68AD233626D400358E2E /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
 		A6AB68BA23362F3600358E2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -77,6 +83,7 @@
 		A628075B232DF1AD00558ADC /* Quizzler */ = {
 			isa = PBXGroup;
 			children = (
+				A6895C1F23375C09006029BF /* Libraries */,
 				A6AB68BD23362FAE00358E2E /* Subclass */,
 				A6AB68A62336260900358E2E /* Localizations */,
 				A680348D23354A690020B71D /* Utils */,
@@ -158,6 +165,25 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		A6895C1F23375C09006029BF /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A6895C2023375CBB006029BF /* Progress HUD */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		A6895C2023375CBB006029BF /* Progress HUD */ = {
+			isa = PBXGroup;
+			children = (
+				A6895C2E23375CE6006029BF /* ProgressHUD.bundle */,
+				A6895C2D23375CE6006029BF /* ProgressHUD.h */,
+				A6895C2C23375CE6006029BF /* ProgressHUD.m */,
+				A6895C2B23375CE6006029BF /* Quizzler-Bridging-Header.h */,
+			);
+			path = "Progress HUD";
+			sourceTree = "<group>";
+		};
 		A6AB68A62336260900358E2E /* Localizations */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +235,7 @@
 				TargetAttributes = {
 					A6280758232DF1AD00558ADC = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -238,6 +265,7 @@
 			files = (
 				A6AB68B923362F3600358E2E /* Localizable.strings in Resources */,
 				A6280767232DF1AE00558ADC /* LaunchScreen.storyboard in Resources */,
+				A6895C3023375CE6006029BF /* ProgressHUD.bundle in Resources */,
 				A680348C23354A480020B71D /* correct.wav in Resources */,
 				A6280764232DF1AE00558ADC /* Assets.xcassets in Resources */,
 				A6280762232DF1AD00558ADC /* Main.storyboard in Resources */,
@@ -257,6 +285,7 @@
 				A6803487233527250020B71D /* ListQuestion.swift in Sources */,
 				A628075F232DF1AD00558ADC /* ViewController.swift in Sources */,
 				A628075D232DF1AD00558ADC /* AppDelegate.swift in Sources */,
+				A6895C2F23375CE6006029BF /* ProgressHUD.m in Sources */,
 				A680348F23354A7C0020B71D /* SoundManager.swift in Sources */,
 				A6BE488C2336717E0016C6DD /* VibrateManager.swift in Sources */,
 				A6BE48902336964C0016C6DD /* ImageView+Animation.swift in Sources */,
@@ -419,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B9C7RXV7S2;
 				INFOPLIST_FILE = "$(SRCROOT)/Quizzler/Supporting Files/Info.plist";
@@ -429,6 +459,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = teamluna.Quizzler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Quizzler/Libraries/Progress HUD/Quizzler-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -438,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B9C7RXV7S2;
 				INFOPLIST_FILE = "$(SRCROOT)/Quizzler/Supporting Files/Info.plist";
@@ -448,6 +481,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = teamluna.Quizzler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Quizzler/Libraries/Progress HUD/Quizzler-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

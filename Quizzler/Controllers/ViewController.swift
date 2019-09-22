@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         lbTotalPoint?.text = String(listQuestion.totalPoint)
         // play sound when your answer is correct
         if (isCorrect){
+            ProgressHUD.showSuccess("correct".localized)
             lbTotalPoint?.pulse()
             soundManager?.play()
         } else {
@@ -43,7 +44,9 @@ class ViewController: UIViewController {
             if (lifeCount<1){
                 vibrateEndGame()
                 showResult()
+                return
             }
+            ProgressHUD.showError("wrong".localized)
         }
         // go to next question
         listQuestion.nextQuestion()
@@ -77,7 +80,7 @@ class ViewController: UIViewController {
     func showResult(){
         let title = "awesome".localized
         let point = "points".localized
-        let message =  "result_message".localized + " \(String(listQuestion.totalPoint)) \(point)"
+        let message =  "result_message".localized + " \(listQuestion.totalPoint) \(point)"
         let alert = UIAlertController(title: title,
                                       message:message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("start".localized, comment: "Default action"), style: .default, handler: { _ in

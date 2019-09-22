@@ -11,13 +11,17 @@ import Foundation
 class ListQuestion{
     var list = [Question]()
     var totalPoint: Int = 0
-    var currentLevel: Int = 1;
+    var currentLevel: Int = 0;
     
     init(){
         nextQuestion()
     }
     
     func nextQuestion(){
+        if (list.count % 10 == 0){
+            currentLevel += 1
+            print("Level: \(currentLevel)")
+        }
         let question = Question(level: currentLevel)
         list.append(question)
     }
@@ -34,6 +38,6 @@ class ListQuestion{
     func reset()  {
         list.removeAll()
         totalPoint = 0
-        currentLevel = 1
+        currentLevel = 0
     }
 }
