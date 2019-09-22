@@ -24,17 +24,17 @@ class SoundManager{
         self.soundType = soundType
     }
     func initSound() {
-        let noteUrl = Bundle.main.path(forResource: soundName, ofType: soundType.rawValue)
+        let path = Bundle.main.path(forResource: soundName, ofType:soundType.rawValue)!
+        let url = URL(fileURLWithPath: path)
+        
         do {
-            try notePlayer = AVAudioPlayer(contentsOf:URL(fileURLWithPath: noteUrl!) )
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: AVAudioSession.Mode.default, options: [AVAudioSession.CategoryOptions.mixWithOthers])
-        } catch  {
-            
+            notePlayer = try AVAudioPlayer(contentsOf: url)
+        } catch {
+           NSLog("Cannot load \(soundName) file")
         }
     }
     
     func play(){
-        notePlayer?.prepareToPlay()
         notePlayer?.play()
     }
 }
