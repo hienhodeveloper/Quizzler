@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "True"; ObjectID = "4Zb-e2-8zm"; */
+"4Zb-e2-8zm.normalTitle" = "Đúng";
+
+/* Class = "UILabel"; text = "0 đ "; ObjectID = "B66-dT-gPR"; */
+"B66-dT-gPR.text" = "0";
+
+/* Class = "UILabel"; text = "1 + 2 = 3"; ObjectID = "bOI-9C-4Lr"; */
+"bOI-9C-4Lr.text" = "1 + 2 = 3";
+
+/* Class = "UIButton"; normalTitle = "False"; ObjectID = "zpf-nJ-gnh"; */
+"zpf-nJ-gnh.normalTitle" = "Sai";

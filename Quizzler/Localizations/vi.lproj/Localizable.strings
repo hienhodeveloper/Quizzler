@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Quizzler
+
+  Created by mini03 on 9/21/19.
+  Copyright © 2019 TeamLuna. All rights reserved.
+*/
+"awesome" = "Tuyệt vời";
+"result_message" = "Bạn đạt được";
+"points" = "điểm";
+"start" = "Chơi mới";
